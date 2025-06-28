@@ -13,14 +13,14 @@ public class ContaBancaria {
         System.out.println("O saldo atualizado é R$ " + saldo);
     }
 
-    public static void depositar(double valor) {
+    public static void depositar(float valor) {
         saldo += valor;
         System.out.println("Depósito de R$ " + valor + " realizado com sucesso.");
         mostrarSaldo();
     }
 
 
-    public static void sacar(double valor) {
+    public static void sacar(float valor) {
         if (valor > saldo) {
             System.out.println("Saldo insuficiente para realizar a operação.");
         } else {
@@ -56,12 +56,12 @@ public class ContaBancaria {
                     break;
                 case 2:
                     System.out.println("Qual o valor que deseja transferir?");
-                    double valorSaque = leitura.nextDouble();
+                    float valorSaque = leitura.nextFloat();
                     sacar(valorSaque);
                     break;
                 case 3:
                     System.out.println("Qual valor deseja receber?");
-                    double valorDeposito = leitura.nextDouble();
+                    float valorDeposito = leitura.nextFloat();
                     depositar(valorDeposito);
                     break;
                 case 4:
