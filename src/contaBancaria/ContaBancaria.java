@@ -9,12 +9,10 @@ public class ContaBancaria {
     private static double saldo = 2500;
     private static Scanner leitura = new Scanner(System.in);
 
-    // Método para mostrar o saldo atual
     public static void mostrarSaldo() {
         System.out.println("O saldo atualizado é R$ " + saldo);
     }
 
-    // Método para depositar um valor
     public static void depositar(double valor) {
         saldo += valor;
         System.out.println("Depósito de R$ " + valor + " realizado com sucesso.");
