@@ -6,7 +6,7 @@ public class ContaBancaria {
 
     private static String nome = "Natasha";
     private static String tipoConta = "Corrente";
-    private static double saldo = 2500;
+    private static float saldo = 2500;
     private static Scanner leitura = new Scanner(System.in);
 
     public static void mostrarSaldo() {
