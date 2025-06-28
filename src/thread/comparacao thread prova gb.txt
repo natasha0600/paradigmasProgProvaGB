@@ -1,0 +1,9 @@
+O valor final do contador sem proteção será quase sempre menor que 600.000.
+Isso ocorre devido às condições de corrida: múltiplas threads tentam ler, incrementar e escrever
+o valor simultaneamente, levando a que alguns incrementos sejam "perdidos" porque uma thread
+sobrescreve o trabalho da outra antes que esta tenha a chance de registrar seu próprio incremento.
+
+Por outro lado, o valor final do contador com proteção será sempre 600.000.
+Isso acontece porque o bloco lock garante que apenas uma thread por vez pode acessar e modificar a
+variável valor. O lock atua como um cadeado, forçando as threads a esperar sua vez, eliminando as
+condições de corrida e assegurando a integridade dos dados compartilhados, mesmo em um ambiente multithreaded.
